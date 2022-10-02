@@ -1,38 +1,103 @@
 .App {
   text-align: center;
+  background-color: rgba(248, 247, 253, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  margin: 3% 10%;
+  transition-duration: 0.3s;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading {
+  font-size: 33px;
+  font-weight: 600;
+  opacity: 0.8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main input {
+  border-radius: 4px;
+  border: 2px solid rgba(236, 235, 242, 255);
+  padding: 4px;
+}
+
+main input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(176, 174, 184, 255);
+}
+
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.btn {
+  border: 2px solid rgba(230, 229, 237, 255);
+  color: rgba(113, 102, 238, 255);
+  background-color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 70px;
+}
+
+.btn:hover {
+  border: 2px solid rgba(113, 102, 238, 255);
   color: white;
+  background-color: rgba(113, 102, 238, 255);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer {
+  background-color: rgba(248, 247, 253, 255);
+  color: rgba(178, 177, 185, 255);
+  padding: 10px;
+}
+
+.space {
+  height: 0;
+}
+
+
+@media only screen and (max-width: 1060px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    margin: 3% 5%;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  main {
+    margin: 3% 5%;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .space {
+    height: 180px;
   }
 }
